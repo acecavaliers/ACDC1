@@ -5,15 +5,15 @@
     <nav class="flex container items-center">
       <NuxtLink to="/" class="flex gap-1 items-center">
         <NuxtImg width="56px" src="/acdc.png" format="webp" alt="" />
-        <span class="text-xl font-bold">Nuxt-ACDC</span>
+        <span class="text-xl font-bold">ACDC</span>
       </NuxtLink>
       <ul class="flex items-center gap-6 ml-auto text-md font-bold capitalize">
         <li>
           <NuxtLink to="/">Home</NuxtLink>
         </li>
-        <li>
+        <!-- <li>
           <NuxtLink to="/about">About</NuxtLink>
-        </li>
+        </li> -->
         <li>
           <NuxtLink to="/MyResume">Resume</NuxtLink>
         </li>
