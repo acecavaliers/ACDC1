@@ -11,9 +11,9 @@
         <li>
           <NuxtLink to="/">Home</NuxtLink>
         </li>
-        <!-- <li>
+        <li>
           <NuxtLink to="/about">About</NuxtLink>
-        </li> -->
+        </li>
         <li>
           <NuxtLink to="/MyResume">Resume</NuxtLink>
         </li>
@@ -21,6 +21,7 @@
           <a href="" to="/login">Login</a>
         </li> -->
       </ul>
+      
     </nav>
   </header>
 </template>

@@ -1,13 +1,14 @@
 <template>
+
   <div>
     <main>
       <section class="bg-[#f1f1f1]">
         <div class="flex justify-end px-5">
           <button
-            @click="printDocument"
+            @click="downloadDocument"
             class="px-4 py-2 bg-gray-700 text-white font-bold rounded shadow"
           >
-            Print Resume
+            Download CV
           </button>
         </div>
       </section>
@@ -38,7 +39,7 @@
             >
               <NuxtImg
                 sizes="xs:100vw sm:322px"
-                src="/acc.png"
+                src="/ac.png"
                 format="webp"
                 densities="x1"
                 alt=""
@@ -341,7 +342,7 @@
           <section class="pb-4">
             <div class="container">
               <h1
-                class="border-b-2 border-sky-900 text-sm text-sky-950 font-medium"
+                class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
               >
                 SUMMARY
               </h1>
@@ -361,7 +362,7 @@
             <div class="container flex justify-between">
               <div class="w-1/2">
                 <h1
-                  class="border-b-2 border-sky-900 text-sm text-sky-950 font-medium"
+                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
                 >
                   HARD SKILLS
                 </h1>
@@ -373,7 +374,7 @@
               </div>
               <div class="w-1/2">
                 <h1
-                  class="border-b-2 border-sky-900 text-sm text-sky-950 font-medium"
+                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
                 >
                   SOFT SKILLS
                 </h1>
@@ -392,11 +393,11 @@
             <div class="container">
               <div>
                 <h1
-                  class="border-b-2 border-sky-900 text-sm text-sky-950 font-medium"
+                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
                 >
                   WORK EXPERIENCE
                 </h1>
-                <h1 class="flex justify-between pt-2 font-medium">
+                <h1 class="flex justify-between pt-2 font-bold text-sm">
                   <span>Full-Stack Developer, DADIANGAS MEDICAL CENTER</span>
                   <span>Apr 2024 – Present</span>
                 </h1>
@@ -461,9 +462,9 @@
                   </li>
                 </ul>
 
-                <h1 class="flex justify-between font-medium pt-4">
-                  <span>System Developer, STARBRIGHT OFFICE DEPOT INC </span>
-                  <span>Jan 2021 – Apr 2024</span>
+                <h1 class="flex justify-between font-bold text-sm pt-4">
+                  <div>System Developer, STARBRIGHT OFFICE DEPOT INC.</div>
+                  <div>Jan 2021 – Apr 2024</div>
                 </h1>
                 <ul class="text-sm">
                   <li>
@@ -518,7 +519,7 @@
           <section class="pb-4">
             <div class="container">
               <h1
-                class="border-b-2 border-sky-900 text-md text-sky-950 font-medium"
+                class="border-b-2 py-2 border-sky-900 text-md text-sky-950 font-medium"
               >
                 EDUCATION
               </h1>
@@ -537,6 +538,7 @@
 </template>
 
 <script setup>
+import { jsPDF } from 'jspdf';
 definePageMeta({
   layout: "default",
 });
@@ -548,4 +550,27 @@ const printDocument = () => {
   window.print();
   document.body.innerHTML = originalContent;
 };
+// Define the downloadDocument function (this will download the content as a PDF)
+const downloadDocument = () => {
+  const printContent = document.getElementById('printable-area').innerHTML;
+
+  // Create a PDF instance with the specified page size (8.5 x 13 inches)
+  const doc = new jsPDF({
+    unit: 'mm',               // The unit of measurement (millimeters)
+    format: [215.9, 330.2],   // Page size: 8.5 x 13 inches in mm (8.5 * 25.4, 13 * 25.4)
+  });
+
+  // Add the HTML content to the PDF and scale it to fit the page
+  doc.html(printContent, {
+    callback: function (doc) {
+      // Save the generated PDF
+      doc.save('document.pdf');
+    },
+    x: 0,       // Horizontal margin (in mm)
+    y: 0,       // Vertical margin (in mm)
+    width: 215.9, // Maximum width (8.5 inches in mm)
+    windowWidth: 800, // Width of the window in pixels (for scaling content)
+  });
+};
+
 </script>
