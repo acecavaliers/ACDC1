@@ -33,32 +33,32 @@ const printCV = () => {
         <li>
           <NuxtLink to="/experience">Experience</NuxtLink>
         </li>
-        <li>
-          <NuxtLink to="/MyResume">Resume</NuxtLink>
-        </li> -->
-        <!-- <li v-if="!user">
-          <a href="" to="/login">Login</a>
-        </li> -->
+         -->
       </ul>
-      <!-- <button
-        @click="downloadCV"
-        class="px-4 py-2 bg-gray-700 text-white font-bold rounded shadow"
-      >
-        Download CV
-      </button> -->
-      <div class="mt-1.5">
-        <Icon
-          name="logos:linkedin-icon"
-          style="color: black"
-          class="w-6 h-6 mr-1.5"
-        />
-        <Icon
-          name="simple-icons:x"
-          style="color: black"
-          class="w-6 h-6 mr-1.5"
-        />
+
+      <div>
+        <a href="https://www.linkedin.com/in/an2nicaballero/" target="_blank">
+          <Icon
+            name="logos:linkedin-icon"
+            style="color: black"
+            class="w-5 h-5 mr-1.5"
+        /></a>
+
+        <a href="https://www.x.com/aceofcavaliers/" target="_blank">
+          <Icon
+            name="simple-icons:x"
+            style="color: black"
+            class="w-5 h-5 mr-1.5"
+        /></a>
+
+        <a href="https://github.com/acecavaliers" target="_blank">
+          <Icon
+            name="logos:github-icon"
+            style="color: black"
+            class="w-5 h-5 mr-1.5"
+        /></a>
       </div>
-      <button
+      <!-- <button
         @click="printCV"
         class="p-2 bg-gray-700 text-white text-sm rounded-md"
       >
@@ -71,7 +71,7 @@ const printCV = () => {
       >
         <Icon name="mdi-light:download" style="color: white" class="w-4 h-4" />
         Download
-      </button>
+      </button> -->
     </nav>
   </header>
 </template>

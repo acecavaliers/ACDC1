@@ -1,7 +1,17 @@
 <template>
   <div>
     <main>
-      <section class="">
+      <section class="bg-[#f1f1f1]">
+        <div class="container flex justify-end">
+          <button
+            @click="printCV"
+            class="px-3 py-1 bg-sky-700 text-white font-medium text-md rounded-b-md"
+          >
+            Print CV
+          </button>
+        </div>
+      </section>
+      <section class="bg-[#f1f1f1]">
         <div
           class="container flex flex-col lg:flex-row items-center py-10 gap-10"
         >
@@ -24,7 +34,7 @@
           </div>
           <div class="flex-1 order-1 lg:order-2">
             <div
-              class="w-1/2 border-4 border-white rounded-full overflow-hidden"
+              class="w-1/2 border-4 border-sky-800 rounded-full overflow-hidden"
             >
               <NuxtImg
                 sizes="xs:100vw sm:322px"
@@ -39,7 +49,7 @@
         </div>
       </section>
       <div class="">
-        <section class="bg-[#f1f1f1] py-4">
+        <section class="py-4">
           <div class="container">
             <div>
               <p class="text-xl lg:text-2xl pb-2 text-balance">SKILLS</p>
@@ -58,7 +68,7 @@
                     name="ion:ellipse-sharp"
                     style="color: black"
                     class="w-2 h-2 mr-1.5"
-                  />Laravel, Vue JS
+                  />Laravel, Vue JS, Tailwind CSS
                 </li>
                 <li>
                   <Icon
@@ -76,6 +86,11 @@
                 />
                 <Icon
                   name="skill-icons:html"
+                  style="color: black"
+                  class="w-10 h-10 mr-1.5"
+                />
+                <Icon
+                  name="skill-icons:tailwindcss-light"
                   style="color: black"
                   class="w-10 h-10 mr-1.5"
                 />
@@ -136,13 +151,19 @@
                   />
                   Collaboration and Communication
                 </li>
-                <li>Adaptability & Learning Agility</li>
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />Adaptability & Learning Agility
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section class="py-8">
+        <section class="bg-[#f1f1f1] py-8">
           <div class="container">
             <div>
               <p class="text-xl lg:text-2xl text-balance">WORK EXPERIENCE</p>
@@ -329,7 +350,7 @@
           </div>
         </section>
 
-        <section class="bg-[#f1f1f1] pb-4">
+        <section class="pb-4">
           <div class="container">
             <div>
               <p class="text-xl lg:text-2xl pb-2 text-balance">EDUCATION</p>
@@ -351,7 +372,7 @@
             <div class="container flex">
               <img
                 class="rounded-md"
-                src="/ac.jpg"
+                src="/ac_resume.jpg"
                 alt="Profile Picture"
                 style="width: 66px; height: 85px; object-fit: cover"
               />
@@ -590,4 +611,14 @@ import { jsPDF } from "jspdf";
 definePageMeta({
   layout: "default",
 });
+import { useDownloadStore } from "~~/stores/downloadStore";
+
+const downloadCV = () => {
+  const downloadStore = useDownloadStore(); // Get store instance
+  downloadStore.triggerDownload(); // Trigger the download
+};
+const printCV = () => {
+  const downloadStore = useDownloadStore(); // Access the store
+  downloadStore.triggerPrint(); // Trigger the print action
+};
 </script>
