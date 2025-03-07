@@ -60,9 +60,17 @@ const printCV = () => {
       </div>
       <button
         @click="printCV"
-        class="px-4 py-2 bg-gray-700 text-white text-sm font-bold rounded-md"
+        class="p-2 bg-gray-700 text-white text-sm rounded-md"
       >
-        Print CV
+        <Icon name="mdi-light:printer" style="color: white" class="w-4 h-4" />
+        Print
+      </button>
+      <button
+        @click="downloadCV"
+        class="p-2 bg-gray-700 text-sm ml-2 text-white rounded-md shadow"
+      >
+        <Icon name="mdi-light:download" style="color: white" class="w-4 h-4" />
+        Download
       </button>
     </nav>
   </header>
