@@ -32,6 +32,7 @@ export default defineNuxtConfig({
    '@nuxt/icon',
    '@nuxtjs/google-fonts',
    '@nuxt/image',
+   '@pinia/nuxt',
   ],
   googleFonts:{
     families:{

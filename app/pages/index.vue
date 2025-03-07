@@ -1,18 +1,7 @@
 <template>
-
   <div>
     <main>
-      <section class="bg-[#f1f1f1]">
-        <div class="flex justify-end px-5">
-          <button
-            @click="downloadDocument"
-            class="px-4 py-2 bg-gray-700 text-white font-bold rounded shadow"
-          >
-            Download CV
-          </button>
-        </div>
-      </section>
-      <section class="bg-[#f1f1f1]">
+      <section class="">
         <div
           class="container flex flex-col lg:flex-row items-center py-10 gap-10"
         >
@@ -49,264 +38,314 @@
           </div>
         </div>
       </section>
+      <div class="">
+        <section class="bg-[#f1f1f1] py-4">
+          <div class="container">
+            <div>
+              <p class="text-xl lg:text-2xl pb-2 text-balance">SKILLS</p>
 
-      <section class="bg-[#f1f1f1] pb-4">
-        <div class="container">
-          <div>
-            <p class="text-xl lg:text-2xl pb-2 text-balance">SKILLS</p>
-
-            <h1 class="pt-2 font-extrabold">HARD SKILLS</h1>
-            <ul class="ml-2 p-2">
-              <li>
+              <h1 class="pt-2 font-extrabold">Technical Skills</h1>
+              <ul class="ml-2 p-2">
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />Languages : Visual Basic, C#, Java, JavaScript, Php, SQL
+                </li>
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />Laravel, Vue JS
+                </li>
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />ERP: SAP Business One, SAP Crystal Report
+                </li>
+              </ul>
+              <div class="ml-2 p-2">
                 <Icon
-                  name="ion:ellipse-sharp"
+                  name="skill-icons:javascript"
                   style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />Languages : VB.NET, C#, Java, JavaScript, Php, SQL
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />Laravel, Vue JS
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />ERP: SAP Business One, SAP Crystal Report
-              </li>
-            </ul>
-
-            <h1 class="pt-2 font-extrabold">SOFT SKILLS</h1>
-            <ul class="ml-2 p-2">
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
+                  class="w-10 h-10 mr-1.5"
                 />
-                Analytical and Problem-Solving Skills
-              </li>
-              <li>
                 <Icon
-                  name="ion:ellipse-sharp"
+                  name="skill-icons:html"
                   style="color: black"
-                  class="w-2 h-2 mr-1.5"
+                  class="w-10 h-10 mr-1.5"
                 />
-                Attention to Detail
-              </li>
-              <li>
                 <Icon
-                  name="ion:ellipse-sharp"
+                  name="logos:vue"
                   style="color: black"
-                  class="w-2 h-2 mr-1.5"
+                  class="w-10 h-10 mr-1.5"
                 />
-                Collaboration and Communication
-              </li>
-            </ul>
+                <Icon
+                  name="skill-icons:laravel-light"
+                  style="color: black"
+                  class="w-10 h-10 mr-1.5"
+                />
+                <Icon
+                  name="skill-icons:dotnet"
+                  style="color: black"
+                  class="w-10 h-10 mr-1.5"
+                />
+                <Icon
+                  name="skill-icons:cpp"
+                  style="color: black"
+                  class="w-10 h-10 mr-1.5"
+                />
+                <Icon
+                  name="skill-icons:php-dark"
+                  style="color: black"
+                  class="w-10 h-10 mr-1.5"
+                />
+                <Icon
+                  name="logos:sap"
+                  style="color: black"
+                  class="w-10 h-10 mr-1.5"
+                />
+              </div>
+              <h1 class="pt-2 font-extrabold">Soft Skills</h1>
+              <ul class="ml-2 p-2">
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Analytical and Problem-Solving Skills
+                </li>
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Attention to Detail
+                </li>
+                <li>
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Collaboration and Communication
+                </li>
+                <li>Adaptability & Learning Agility</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="bg-[#f1f1f1] pb-8">
-        <div class="container">
-          <div>
-            <p class="text-xl lg:text-2xl text-balance">WORK EXPERIENCE</p>
+        <section class="py-8">
+          <div class="container">
+            <div>
+              <p class="text-xl lg:text-2xl text-balance">WORK EXPERIENCE</p>
 
-            <h1 class="pt-2 font-extrabold">
-              <span>Apr 2024- Present | </span>
-              <span>Full-Stack Developer, DADIANGAS MEDICAL CENTER</span>
-            </h1>
-            <ul class="p-2">
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Database Design: Created and optimized relational databases for
-                hospital systems.
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                History & Physical Examination Form: Developed a responsive form
-                for collecting patient data.
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Human Resource Information System:
-                <ul class="ml-4 pb-2">
-                  <li>
-                    - Employee Work Shift Module: Built shift scheduling for HR.
-                  </li>
-                  <li>
-                    - Employee Time-In Record Module: Automated attendance
-                    tracking.
-                  </li>
-                  <li>
-                    - Request Time Off Module: Developed leave request and
-                    approval workflows.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />Material Management System:
-                <ul class="ml-4 pb-2">
-                  <li>- Supplier Modules: Streamlined supplier management.</li>
-                  <li>
-                    - Purchase Request/Quotation/Order Modules: Automated
-                    procurement process.
-                  </li>
-                  <li>
-                    - Approval Setup Module: Created approval workflows for
-                    procurement.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                AWS EC2 Experience:
-                <ul class="ml-4 pb-2">
-                  <li>
-                    - EC2 Deployment: Managed EC2 instances for hosting hospital
-                    applications.
-                  </li>
-                  <li>
-                    - CI/CD Integration: Set up automated deployment pipelines.
-                  </li>
-                  <li>
-                    - Auto Scaling: Configured Auto Scaling for resource
-                    optimization.
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              <h1 class="pt-2 text-lg font-extrabold">Full-Stack Developer</h1>
+              <h1 class="italic">
+                Dadiangs Medical Center, General Santos City
+              </h1>
+              <h1 class="italic">Apr 2024- Present</h1>
+              <ul class="ml-2 p-2">
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Database Design: Created and optimized relational databases
+                  for hospital systems.
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Collaborated with cross-functional teams to design and
+                  implement RESTful APIs, enabling seamless integration with
+                  third-party services.
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Developed Modules for Human Resource Information System (HRIS)
+                  <ul class="ml-4 pb-2">
+                    <li class="p-1">
+                      - Employee Work Shift Module: Built shift scheduling for
+                      HR.
+                    </li>
+                    <li class="p-1">
+                      - Employee Time-In Record Module: Automated attendance
+                      tracking.
+                    </li>
+                    <li class="p-1">
+                      - Request Time Off Module: Developed leave request and
+                      approval workflows.
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />Developed Modules for Material Management System (MMS)
+                  <ul class="ml-4 pb-2">
+                    <li class="p-1">
+                      - Supplier Modules: Streamlined supplier management.
+                    </li>
+                    <li class="p-1">
+                      - Purchase Request/Quotation/Order Modules: Automated
+                      procurement process.
+                    </li>
+                    <li class="p-1">
+                      - Approval Setup Module: Created approval workflows for
+                      procurement.
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  AWS EC2 Experience:
+                  <ul class="ml-4 pb-2">
+                    <li class="p-1">
+                      - EC2 Deployment: Managed EC2 instances for hosting
+                      hospital applications.
+                    </li>
+                    <li class="p-1">
+                      - CI/CD Integration: Set up automated deployment
+                      pipelines.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
 
-            <h1 class="pt-2 font-extrabold pt-4">
-              <span>Jan 2021 – Apr 2024 | </span>
-              <span>System Developer, STARBRIGHT OFFICE DEPOT INC </span>
-            </h1>
-            <ul class="p-2">
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Built systems to streamline communication between departments.
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Developed SQL Queries to fetch complex data from different
-                tables using joins.
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Developed and Involved in optimizing Stored Procedures and
-                queries for faster retrieval and Server efficiency.
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Analyze user needs, design and code software solutions, and test
-                and evaluate the software to ensure it meets the required
-                specifications.
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                SAP Business One customize and create reports using Crystal
-                Reports.
-                <ul class="ml-4 pb-2">
-                  <li>
-                    - Sales Report, E-Sales Report,Collection Report, 2307
-                    Reports, Financial Statements, Book of Accounts
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                SAP Business One create and modify the following :
-                <ul class="ml-4 pb-2">
-                  <li>- User Defined Fields (UDF), Formatted Search,</li>
-                  <li>
-                    - User Defined Tables (UDT), and User Defined Objects (UDO)
-                    based on the company's needs.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Icon
-                  name="ion:ellipse-sharp"
-                  style="color: black"
-                  class="w-2 h-2 mr-1.5"
-                />
-                Developed software systems using the VB.NET.
-                <ul class="ml-4 p-2">
-                  <li>- DGCD Price and Stocks Inquiry Program.</li>
-                  <li>- Suds Laundry Transactions Monitoring System .</li>
-                </ul>
-              </li>
-            </ul>
+              <h1 class="pt-2 text-lg font-extrabold">System Developer</h1>
+              <h1 class="italic">
+                Starbright Office Depot Inc., General Santos City
+              </h1>
+              <h1 class="italic">Jan 2021 – Apr 2024</h1>
+              <ul class="ml-2 p-2">
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Built systems to streamline communication between departments.
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Developed SQL Queries to fetch complex data from different
+                  tables using joins.
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Developed and Involved in optimizing Stored Procedures and
+                  queries for faster retrieval and Server efficiency.
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Analyze user needs, design and code software solutions, and
+                  test and evaluate the software to ensure it meets the required
+                  specifications.
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  SAP Business One customize and create reports using Crystal
+                  Reports.
+                  <ul class="ml-4 pb-2">
+                    <li class="p-1">
+                      - Sales Report, E-Sales Report,Collection Report, 2307
+                      Reports, Financial Statements, Book of Accounts
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  SAP Business One create and modify the following :
+                  <ul class="ml-4 pb-2">
+                    <li class="p-1">
+                      - User Defined Fields (UDF), Formatted Search,
+                    </li>
+                    <li class="p-1">
+                      - User Defined Tables (UDT), and User Defined Objects
+                      (UDO) based on the company's needs.
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-1">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  Developed software systems using the VB.NET.
+                  <ul class="ml-4 p-2">
+                    <li class="p-1">
+                      - DGCD Price and Stocks Inquiry Program.
+                    </li>
+                    <li class="p-1">
+                      - Suds Laundry Transactions Monitoring System .
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="bg-[#f1f1f1] pb-4">
-        <div class="container">
-          <div>
-            <p class="text-xl lg:text-2xl pb-2 text-balance">EDUCATION</p>
+        <section class="bg-[#f1f1f1] pb-4">
+          <div class="container">
+            <div>
+              <p class="text-xl lg:text-2xl pb-2 text-balance">EDUCATION</p>
 
-            <h1 class="pt-2 font-extrabold">
-              B.S. Information Technology | <span> 2017 to 2020</span>
-            </h1>
-            <h1>NOTRE DAME OF DADIANGAS UNIVERSITY</h1>
-            <h1>General Santos City</h1>
+              <h1 class="pt-2 font-extrabold">
+                B.S. Information Technology | <span> 2017 to 2020</span>
+              </h1>
+              <h1>NOTRE DAME OF DADIANGAS UNIVERSITY</h1>
+              <h1>General Santos City</h1>
+            </div>
           </div>
-        </div>
-      </section>
-      <div class="container">
-        <div
-          id="printable-area"
-          class="hidden w-[8.5in] h-[13in] bg-white mx-auto"
-        >
+        </section>
+      </div>
+      <!-- hidden -->
+      <div class="hidden">
+        <div id="printable-area" class="w-[8.5in] h-[13in] bg-white mx-auto">
           <!-- Header / Basic Personal Info -->
           <section class="py-4">
             <div class="container flex">
@@ -357,6 +396,7 @@
               </p>
             </div>
           </section>
+
           <!-- Skills -->
           <section class="pb-4">
             <div class="container flex justify-between">
@@ -364,31 +404,36 @@
                 <h1
                   class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
                 >
-                  HARD SKILLS
+                  Technical Skills
                 </h1>
                 <ul class="text-sm ml-2">
-                  <li>• Languages : VB.NET, C#, Java, JavaScript, Php, SQL</li>
-                  <li>• Laravel, Vue JS</li>
-                  <li>• ERP: SAP Business One, SAP Crystal Report</li>
+                  <li>
+                    • Programming Languages : Visual Basic, C#, Java,
+                    JavaScript, PHP, and SQL
+                  </li>
+                  <li>• Frameworks & Libraries : Laravel and Vuejs.</li>
+                  <li>
+                    • ERP Systems : SAP Business One and SAP Crystal Reports.
+                  </li>
                 </ul>
               </div>
               <div class="w-1/2">
                 <h1
                   class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
                 >
-                  SOFT SKILLS
+                  Soft Skills
                 </h1>
                 <ul class="text-sm ml-2">
                   <li>• Analytical and Problem-Solving Skills</li>
                   <li>• Attention to Detail</li>
                   <li>• Collaboration and Communication</li>
+                  <li>• Adaptability & Learning Agility</li>
                 </ul>
               </div>
             </div>
           </section>
-
           <!-- Work Experience -->
-          <!-- Skills -->
+
           <section class="pb-4">
             <div class="container">
               <div>
@@ -397,21 +442,25 @@
                 >
                   WORK EXPERIENCE
                 </h1>
-                <h1 class="flex justify-between pt-2 font-bold text-sm">
-                  <span>Full-Stack Developer, DADIANGAS MEDICAL CENTER</span>
-                  <span>Apr 2024 – Present</span>
+
+                <h1 class="pt-2 font-bold text-sm">Full-Stack Developer</h1>
+                <h1 class="italic text-sm">
+                  Dadiangs Medical Center, General Santos City
                 </h1>
-                <ul class="text-sm">
+                <h1 class="italic text-sm">Apr 2024- Present</h1>
+
+                <ul class="text-sm ml-4">
                   <li>
                     • Database Design: Created and optimized relational
                     databases for hospital systems.
                   </li>
                   <li>
-                    • History & Physical Examination Form: Developed a
-                    responsive form for collecting patient data.
+                    • Collaborated with teams to design and implement RESTful
+                    APIs.
                   </li>
                   <li>
-                    • Human Resource Information System:
+                    • Developed Modules for Human Resource Information System
+                    (HRIS)
                     <ul class="text-sm ml-4">
                       <li>
                         - Employee Work Shift Module: Built shift scheduling for
@@ -428,7 +477,7 @@
                     </ul>
                   </li>
                   <li>
-                    • Material Management System:
+                    • Developing Modules for Material Management System (MMS)
                     <ul class="text-sm ml-4">
                       <li>
                         - Supplier Modules: Streamlined supplier management.
@@ -444,7 +493,7 @@
                     </ul>
                   </li>
                   <li>
-                    • AWS EC2 Experience:
+                    • AWS EC2 Experience
                     <ul class="text-sm ml-4">
                       <li>
                         - EC2 Deployment: Managed EC2 instances for hosting
@@ -454,19 +503,16 @@
                         - CI/CD Integration: Set up automated deployment
                         pipelines.
                       </li>
-                      <li>
-                        - Auto Scaling: Configured Auto Scaling for resource
-                        optimization.
-                      </li>
                     </ul>
                   </li>
                 </ul>
 
-                <h1 class="flex justify-between font-bold text-sm pt-4">
-                  <div>System Developer, STARBRIGHT OFFICE DEPOT INC.</div>
-                  <div>Jan 2021 – Apr 2024</div>
+                <h1 class="pt-2 font-bold text-sm">System Developer</h1>
+                <h1 class="italic text-sm">
+                  Starbright Office Depot Inc., General Santos City
                 </h1>
-                <ul class="text-sm">
+                <h1 class="italic text-sm">Jan 2021 – Apr 2024</h1>
+                <ul class="ml-4 text-sm">
                   <li>
                     • Built systems to streamline communication between
                     departments.
@@ -495,17 +541,17 @@
                     </ul>
                   </li>
                   <li>
-                    • SAP Business One create and modify the following :
+                    • SAP Business One create and modify the following:
                     <ul class="text-sm ml-4">
-                      <li>- User Defined Fields (UDF), Formatted Search,</li>
+                      <li>- User Defined Fields (UDF), Formatted Search.</li>
                       <li>
                         - User Defined Tables (UDT), and User Defined Objects
-                        (UDO) based on the company's needs.
+                        (UDO).
                       </li>
                     </ul>
                   </li>
                   <li>
-                    • Developed software systems using the VB.NET.
+                    • Developed software systems with Visual Basic .
                     <ul class="text-sm ml-4">
                       <li>- DGCD Price and Stocks Inquiry Program.</li>
                       <li>- Suds Laundry Transactions Monitoring System .</li>
@@ -523,12 +569,14 @@
               >
                 EDUCATION
               </h1>
-              <h1 class="flex justify-between pt-2 text-sm font-medium text-sm">
-                <span>B.S. Information Technology </span>
-                <span> 2017 to 2020</span>
+              <h1 class="pt-2 text-sm font-medium text-sm">
+                B.S. Information Technology
               </h1>
-              <h1 class="text-sm">NOTRE DAME OF DADIANGAS UNIVERSITY</h1>
-              <h1 class="text-sm">General Santos City</h1>
+
+              <h1 class="text-sm">
+                Notre Dame Of Dadiangas University, General Santos City
+              </h1>
+              <h1>2017 to 2020</h1>
             </div>
           </section>
         </div>
@@ -538,39 +586,8 @@
 </template>
 
 <script setup>
-import { jsPDF } from 'jspdf';
+import { jsPDF } from "jspdf";
 definePageMeta({
   layout: "default",
 });
-const printDocument = () => {
-  const printContent = document.getElementById("printable-area").innerHTML;
-  const originalContent = document.body.innerHTML;
-
-  document.body.innerHTML = printContent;
-  window.print();
-  document.body.innerHTML = originalContent;
-};
-// Define the downloadDocument function (this will download the content as a PDF)
-const downloadDocument = () => {
-  const printContent = document.getElementById('printable-area').innerHTML;
-
-  // Create a PDF instance with the specified page size (8.5 x 13 inches)
-  const doc = new jsPDF({
-    unit: 'mm',               // The unit of measurement (millimeters)
-    format: [215.9, 330.2],   // Page size: 8.5 x 13 inches in mm (8.5 * 25.4, 13 * 25.4)
-  });
-
-  // Add the HTML content to the PDF and scale it to fit the page
-  doc.html(printContent, {
-    callback: function (doc) {
-      // Save the generated PDF
-      doc.save('document.pdf');
-    },
-    x: 0,       // Horizontal margin (in mm)
-    y: 0,       // Vertical margin (in mm)
-    width: 215.9, // Maximum width (8.5 inches in mm)
-    windowWidth: 800, // Width of the window in pixels (for scaling content)
-  });
-};
-
 </script>
