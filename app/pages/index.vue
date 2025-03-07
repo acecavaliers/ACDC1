@@ -16,7 +16,9 @@
           class="container flex flex-col lg:flex-row items-center py-10 gap-10"
         >
           <div class="flex-1 order-2 lg:order-1 text-center lg:text-left">
-            <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 text-balance">
+            <h1
+              class="text-4xl lg:text-6xl font-extrabold mb-6 text-balance uppercase"
+            >
               Anthony Caballero
             </h1>
             <p class="text-xl lg:text-2xl mb-4 text-balance">
@@ -52,7 +54,9 @@
         <section class="py-4">
           <div class="container">
             <div>
-              <p class="text-xl lg:text-2xl pb-2 text-balance">SKILLS</p>
+              <p class="text-xl lg:text-2xl text-sky-900 pb-2 text-balance">
+                SKILLS
+              </p>
 
               <h1 class="pt-2 font-extrabold">Technical Skills</h1>
               <ul class="ml-2 p-2">
@@ -166,7 +170,9 @@
         <section class="bg-[#f1f1f1] py-8">
           <div class="container">
             <div>
-              <p class="text-xl lg:text-2xl text-balance">WORK EXPERIENCE</p>
+              <p class="text-xl lg:text-2xl text-sky-900 text-balance">
+                WORK EXPERIENCE
+              </p>
 
               <h1 class="pt-2 text-lg font-extrabold">Full-Stack Developer</h1>
               <h1 class="italic">
@@ -353,12 +359,13 @@
         <section class="pb-4">
           <div class="container">
             <div>
-              <p class="text-xl lg:text-2xl pb-2 text-balance">EDUCATION</p>
+              <p class="text-xl lg:text-2xl text-sky-900 pb-2 text-balance">
+                EDUCATION
+              </p>
 
-              <h1 class="pt-2 font-extrabold">
-                B.S. Information Technology | <span> 2017 to 2020</span>
-              </h1>
-              <h1>NOTRE DAME OF DADIANGAS UNIVERSITY</h1>
+              <h1 class="pt-2 font-extrabold">B.S. Information Technology</h1>
+              <h1>2017 - 2020</h1>
+              <h1>Notre Dame Of Dadiangas University</h1>
               <h1>General Santos City</h1>
             </div>
           </div>
