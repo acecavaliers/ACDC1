@@ -1,0 +1,155 @@
+{
+    "_comment": ["and cloud infrastructure (AWS EC2)",
+    {
+      "summary": "AWS EC2 Experience",
+      "details": [
+        "EC2 Deployment: Managed EC2 instances for hosting hospital applications.",
+        "CI/CD Integration: Set up automated deployment pipelines."
+      ]
+    } ],
+    "summary":"Full-Stack Developer with expertise in front-end and back-end technologies like VB.NET, SAP B1, Crystal Reports, Laravel, and Vue.js. Skilled in database design, system optimization and development. Proven ability to deliver scalable, user-friendly applications and streamline business processes. Experienced in report generation, query optimization, and full development lifecycle from design to deployment."
+    ,
+    "education":
+    {   
+        "course":"B.S. Information Technology",
+         "year":"2017 - 2020",
+        "school":"Notre Dame Of Dadiangas University",
+        "address":"General Santos City"
+}
+    ,
+    "skillIcon": [
+      {
+        "icon":"skill-icons:javascript"
+      },
+      {
+        "icon":"skill-icons:html"
+      },
+      {
+        "icon":"skill-icons:tailwindcss-light"
+      },
+      {
+        "icon":"logos:vue"
+      },
+      {
+        "icon":"skill-icons:laravel-light"
+      },
+      {
+        "icon":"skill-icons:dotnet"
+      },
+      {
+        "icon":"skill-icons:cpp"
+      },
+      {
+        "icon":"skill-icons:php-dark"
+      },
+      {
+        "icon":"logos:sap"
+      }
+    ],
+    "skill": [
+      {
+        "icon":"ion:ellipse-sharp ",
+        "skill": "Analytical and Problem-Solving Skills"
+      },
+      {
+        "icon":"ion:ellipse-sharp ",
+        "skill": "Attention to Detail"
+      },
+      {
+        "icon":"ion:ellipse-sharp ",
+        "skill": "Collaboration and Communication"
+      },
+      {
+        "icon":"ion:ellipse-sharp ",
+        "skill": "Adaptability & Learning Agility"
+      }
+    ],
+    "technicalSkills": [
+      {
+        "icon":"ion:ellipse-sharp",
+        "type": "Languages",
+        "items": ["Visual Basic", "C#", "Java", "JavaScript", "Php", "SQL"]
+      },
+      {
+        "icon":"ion:ellipse-sharp",
+        "type": "Frameworks",
+        "items": ["Laravel", "Vue JS", "Tailwind CSS"]
+      },
+      {
+        "icon":"ion:ellipse-sharp",
+        "type": "ERP",
+        "items": ["SAP Business One", "SAP Crystal Report"]
+      }
+    ],
+    "experience": [
+        {
+          "position": "Full-Stack Developer",
+          "company": "Dadiangs Medical Center, General Santos City",
+          "date": "Apr 2024 – Present",
+          "responsibilities": [
+            {
+              "summary": "Database Design: Created and optimized relational databases for hospital systems."
+            },
+            {
+              "summary": "Collaborated with cross-functional teams to design and implement RESTful APIs, enabling seamless integration with third-party services."
+            },
+            {
+              "summary": "Developed Modules for Human Resource Information System (HRIS)",
+              "details": [
+                "Employee Work Shift Module: Built shift scheduling for HR.",
+                "Employee Time-In Record Module: Automated attendance tracking.",
+                "Request Time Off Module: Developed leave request and approval workflows."
+              ]
+            },
+            {
+              "summary": "Developed Modules for Material Management System (MMS)",
+              "details": [
+                "Supplier Modules: Streamlined supplier management.",
+                "Purchase Request/Quotation/Order Modules: Automated procurement process.",
+                "Approval Setup Module: Created approval workflows for procurement."
+              ]
+            }
+          ]
+        },
+        {
+          "position": "System Developer",
+          "company": "Starbright Office Depot Inc., General Santos City",
+          "date": "Jan 2021 – Apr 2024",
+          "responsibilities": [
+            {
+              "summary": "Built systems to streamline communication between departments."
+            },
+            {
+              "summary": "Developed SQL Queries to fetch complex data from different tables using joins."
+            },
+            {
+              "summary": "Developed and optimized Stored Procedures and queries for performance and server efficiency."
+            },
+            {
+              "summary": "Analyze user needs, design and code software solutions, and test and evaluate the software to ensure it meets specifications."
+            },
+            {
+              "summary": "SAP Business One: Customized and created reports using Crystal Reports.",
+              "details": [
+                "Sales Report, E-Sales Report, Collection Report, 2307 Reports, Financial Statements, Book of Accounts"
+              ]
+            },
+            {
+              "summary": "SAP Business One: Created and modified user-defined components.",
+              "details": [
+                "User Defined Fields (UDF), Formatted Search",
+                "User Defined Tables (UDT), and User Defined Objects (UDO) based on company needs"
+              ]
+            },
+            {
+              "summary": "Developed software systems using VB.NET.",
+              "details": [
+                "DGCD Price and Stocks Inquiry Program.",
+                "Suds Laundry Transactions Monitoring System."
+              ]
+            }
+          ]
+        }
+      ]
+
+}

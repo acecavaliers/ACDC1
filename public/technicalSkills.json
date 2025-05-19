@@ -1,0 +1,20 @@
+{
+    "technicalSkills": [
+      {
+        "icon":"ion:ellipse-sharp",
+        "type": "Languages",
+        "items": ["Visual Basic", "C#", "Java", "JavaScript", "Php", "SQL"]
+      },
+      {
+        "icon":"ion:ellipse-sharp",
+        "type": "Frameworks",
+        "items": ["Laravel", "Vue JS", "Tailwind CSS"]
+      },
+      {
+        "icon":"ion:ellipse-sharp",
+        "type": "ERP",
+        "items": ["SAP Business One", "SAP Crystal Report"]
+      }
+    ]
+  }
+  

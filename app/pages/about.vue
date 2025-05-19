@@ -241,7 +241,7 @@
                     </li>
                   </ul>
                 </li>
-                <li>
+                <!-- <li>
                   <Icon
                     name="ion:ellipse-sharp"
                     style="color: black"
@@ -262,7 +262,7 @@
                       optimization.
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
 
               <h1 class="flex justify-between pt-2 font-extrabold pt-4">
