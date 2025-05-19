@@ -30,7 +30,7 @@
           </div>
           <div class="flex-1 order-1 lg:order-2">
             <div
-              class="w-1/3 border-4 border-sky-800 rounded-full overflow-hidden"
+              class="w-1/2 border-4 border-sky-800 rounded-full overflow-hidden"
             >
               <NuxtImg
                 sizes="xs:100vw sm:322px"
