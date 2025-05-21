@@ -30,7 +30,7 @@
           </div>
           <div class="flex-1 order-1 lg:order-2">
             <div
-              class="w-1/2 border-4 border-sky-800 rounded-full overflow-hidden"
+              class="w-1/2 border-8 border-sky-800 rounded-full overflow-hidden"
             >
               <NuxtImg
                 sizes="xs:100vw sm:322px"
@@ -38,7 +38,7 @@
                 format="webp"
                 densities="x1"
                 alt=""
-                class="w-full h-full object-cover"
+                class="w-full h-full p-2 object-cover"
               />
             </div>
           </div>
@@ -146,12 +146,18 @@
           </div>
         </div>
       </section>
-      <section class="pb-4 h-24 bg-gray-100">
-        <div class="container"></div>
+      <section class="bottom-0 w-full h-8 bg-[#f1f1f1]">
+        <div class="container pt-1 flex justify-between">
+          <p class="text-sm">© {{ currentYear }} ACDC. All rights reserved</p>
+          <p class="text-sm">
+            <span class="text-sm">Contact: {{ info.phone }}</span>
+            <span class="text-sm ml-4">Email: {{ info.email }}</span>
+          </p>
+        </div>
       </section>
 
       <!-- hidden -->
-      <div class="hidden">
+      <div class="">
         <div id="printable-area" class="w-[8.5in] h-[13in] bg-white mx-auto">
           <!-- Header / Basic Personal Info -->
           <section class="py-4">
@@ -165,21 +171,18 @@
 
               <!-- <img src="/acdc.png" alt="" /> -->
               <div class="px-4">
-                <h1 class="text-xl font-medium">ANTHONY CABALLERO</h1>
+                <h1 class="text-xl font-medium uppercase">{{ info.name }}</h1>
                 <div class="flex text-sm">
                   <div class="sm:w-16">Phone</div>
-                  <h1 class="">: +63 991 500 3008</h1>
+                  <h1 class="">: {{ info.phone }}</h1>
                 </div>
                 <div class="flex text-sm">
                   <div class="sm:w-16">Email</div>
-                  <h1 class="">: acecavaliers@gmail.com</h1>
+                  <h1 class="">: {{ info.email }}</h1>
                 </div>
                 <div class="flex text-sm">
                   <div class="sm:w-16">Address</div>
-                  <h1 class="">
-                    : Babasa Subdivision, Purok 15, Lagao, General Santos City,
-                    Philippines
-                  </h1>
+                  <h1 class="">: {{ info.address }}</h1>
                 </div>
               </div>
             </div>
@@ -188,7 +191,7 @@
           <section class="pb-4">
             <div class="container">
               <h1
-                class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
+                class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
               >
                 SUMMARY
               </h1>
@@ -203,14 +206,14 @@
             <div class="container flex justify-between">
               <div class="w-1/2">
                 <h1
-                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
+                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
                 >
                   Technical Skills
                 </h1>
 
                 <ul class="text-sm ml-2">
                   <li v-for="(skill, index) in techSkills" :key="index">
-                    • {{ skill.type }}: {{ skill.items.join(", ") }}
+                    • {{ skill.items.join(", ") }}
                   </li>
                   <!-- <li>
                     • Programming Languages : Visual Basic, C#, Java,
@@ -224,7 +227,7 @@
               </div>
               <div class="w-1/2">
                 <h1
-                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
+                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
                 >
                   Soft Skills
                 </h1>
@@ -242,13 +245,13 @@
             <div class="container">
               <div>
                 <h1
-                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-medium"
+                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
                 >
                   WORK EXPERIENCE
                 </h1>
 
-                <div v-for="(exp, index) in xp" :key="index">
-                  <h1 class="pt-2 text-sm font-medium">
+                <div v-for="(exp, index) in xp" :key="index" class="pb-2">
+                  <h1 class="pt-2 text-sm font-bold">
                     {{ exp.position }}
                   </h1>
                   <h1 class="italic text-sm">
@@ -284,7 +287,7 @@
           <section class="pb-4">
             <div class="container">
               <h1
-                class="border-b-2 py-2 border-sky-900 text-md text-sky-950 font-medium"
+                class="border-b-2 py-2 border-sky-900 text-md text-sky-950 font-bold"
               >
                 EDUCATION
               </h1>
@@ -314,8 +317,9 @@ const skillIcon = ref([]);
 const softSkill = ref([]);
 const xp = ref([]);
 const education = ref({});
+const info = ref({});
 const summary = ref("");
-
+const currentYear = new Date().getFullYear();
 const downloadCV = () => {
   const downloadStore = useDownloadStore();
   downloadStore.triggerDownload();
@@ -332,6 +336,7 @@ onMounted(() => {
   softSkill.value = data.skill;
   xp.value = data.experience;
   education.value = data.education;
+  info.value = data.info;
   summary.value = data.summary;
 });
 </script>

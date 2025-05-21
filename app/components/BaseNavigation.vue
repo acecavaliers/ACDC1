@@ -49,14 +49,38 @@ const printCV = () => {
 
       <!-- Bottom row: Print button -->
       <div class="container">
-        <div class="flex justify-end">
-          <button
-            @click="printCV"
-            class="px-3 py-1 bg-sky-700 text-white font-medium text-md rounded-b-md"
-          >
-            <!-- <Icon name="mdi-light:printer" class="w-4 h-4" /> -->
-            Print CV
-          </button>
+        <div class="flex justify-end space-x-0">
+          <div class="relative group inline-block">
+            <button
+              @click="printCV"
+              class="px-3 bg-sky-700 text-white text-md rounded-bl-md"
+            >
+              <Icon name="material-symbols:print-sharp" class="w-5 h-5" />
+            </button>
+
+            <!-- Tooltip -->
+            <span
+              class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 bg-black text-white text-xs rounded px-2 py-1 transition-opacity whitespace-nowrap z-50"
+            >
+              Print CV
+            </span>
+          </div>
+
+          <div class="relative group inline-block">
+            <button
+              @click="downloadCV"
+              class="px-3 bg-sky-800 text-white text-md rounded-br-md"
+            >
+              <Icon name="material-symbols:download-sharp" class="w-5 h-5" />
+            </button>
+
+            <!-- Tooltip -->
+            <span
+              class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 bg-black text-white text-xs rounded px-2 py-1 transition-opacity whitespace-nowrap z-50"
+            >
+              Download CV
+            </span>
+          </div>
         </div>
       </div>
     </div>

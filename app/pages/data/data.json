@@ -9,14 +9,19 @@
     } ],
     "summary":"Full-Stack Developer with expertise in front-end and back-end technologies like VB.NET, SAP B1, Crystal Reports, Laravel, and Vue.js. Skilled in database design, system optimization and development. Proven ability to deliver scalable, user-friendly applications and streamline business processes. Experienced in report generation, query optimization, and full development lifecycle from design to deployment."
     ,
+    "info":
+    {   "name":"ANTHONY CABALLERO",
+        "phone":"+63 991 500 3008",
+        "email":"acecavaliers@gmail.com",
+        "address":"Babasa Subdivision, Purok 15, Lagao, General Santos City, Philippines"
+    },
     "education":
     {   
         "course":"B.S. Information Technology",
          "year":"2017 - 2020",
         "school":"Notre Dame Of Dadiangas University",
         "address":"General Santos City"
-}
-    ,
+    },
     "skillIcon": [
       {
         "icon":"skill-icons:javascript"
@@ -84,7 +89,7 @@
     "experience": [
         {
           "position": "Full-Stack Developer",
-          "company": "Dadiangs Medical Center, General Santos City",
+          "company": "Dadiangas Medical Center, General Santos City",
           "date": "Apr 2024 – Present",
           "responsibilities": [
             {
