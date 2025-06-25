@@ -134,7 +134,7 @@
         </div>
       </section>
 
-      <section class="pb-4">
+      <section class="py-8">
         <div class="container">
           <div>
             <p class="text-xl lg:text-2xl text-sky-900 pb-2 text-balance">
@@ -157,7 +157,7 @@
       </section>
 
       <!-- hidden -->
-      <div class="">
+      <div class="hidden">
         <div id="printable-area" class="w-[8.5in] h-[13in] bg-white mx-auto">
           <!-- Header / Basic Personal Info -->
           <section class="py-4">
