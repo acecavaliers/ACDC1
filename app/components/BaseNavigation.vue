@@ -19,10 +19,16 @@ const printCV = () => {
       <div class="bg-white py-4 border-b shadow-sm">
         <nav class="container flex items-center justify-between">
           <NuxtLink to="/" class="flex gap-1 items-center">
-            <NuxtImg width="56px" src="/acdc.png" format="webp" alt="" />
-            <span class="text-xl font-bold">
+            <NuxtImg
+              width="56px"
+              src="/an2ni.png"
+              format="webp"
+              alt="ACDC logo with C in red"
+            />
+
+            <!-- <span class="text-xl font-bold">
               A<span class="text-red-500">C</span>DC
-            </span>
+            </span> -->
           </NuxtLink>
 
           <ul class="flex items-center gap-6 text-md font-bold capitalize">
