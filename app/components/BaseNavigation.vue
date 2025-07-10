@@ -1,5 +1,13 @@
 <script setup>
 import { useDownloadStore } from "~~/stores/downloadStore";
+import { ref } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
+const isMobileMenuOpen = ref(false);
+
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 
 const downloadCV = () => {
   const downloadStore = useDownloadStore(); // Get store instance
@@ -31,12 +39,74 @@ const printCV = () => {
             </span> -->
           </NuxtLink>
 
-          <ul class="flex items-center gap-6 text-md font-bold capitalize">
-            <!-- Add nav links here if needed -->
-          </ul>
-
           <!-- Socials -->
-          <div class="flex items-center gap-2">
+          <div class="hidden md:flex items-center gap-2">
+            <!-- <div class="flex items-center gap-2"> -->
+            <ul class="flex items-center gap-4 text-sm capitalize px-4">
+              <!-- Add nav links here if needed -->
+              <!-- <li>
+                <NuxtLink
+                  to="/"
+                  :class="[
+                    route.path === '/'
+                      ? 'text-red-500 font-bold'
+                      : 'text-gray-700',
+                    'transition-colors hover:text-red-500',
+                  ]"
+                  >Home</NuxtLink
+                >
+              </li> -->
+
+              <li>
+                <NuxtLink
+                  to="/about"
+                  :class="[
+                    route.path === '/about'
+                      ? 'text-red-500 font-bold'
+                      : 'text-gray-700',
+                    'transition-colors hover:text-red-500',
+                  ]"
+                  >About</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/portfolio"
+                  :class="[
+                    route.path === '/portfolio'
+                      ? 'text-red-500 font-bold'
+                      : 'text-gray-700',
+                    'transition-colors hover:text-red-500',
+                  ]"
+                  @click="toggleMobileMenu"
+                  >portfolio</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/skills"
+                  :class="[
+                    route.path === '/skills'
+                      ? 'text-red-500 font-bold'
+                      : 'text-gray-700',
+                    'transition-colors hover:text-red-500',
+                  ]"
+                  >Skills</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  to="/cv"
+                  :class="[
+                    route.path === '/cv'
+                      ? 'text-red-500 font-bold'
+                      : 'text-gray-700',
+                    'transition-colors hover:text-red-500',
+                  ]"
+                  >CV</NuxtLink
+                >
+              </li>
+            </ul>
             <a
               href="https://www.linkedin.com/in/an2nicaballero/"
               target="_blank"
@@ -50,6 +120,11 @@ const printCV = () => {
               <Icon name="logos:github-icon" class="w-5 h-5" />
             </a>
           </div>
+
+          <!-- Hamburger Menu (Mobile Only) -->
+          <button class="md:hidden" @click="toggleMobileMenu">
+            <Icon name="mdi:menu" class="w-6 h-6" />
+          </button>
         </nav>
       </div>
 
@@ -90,5 +165,99 @@ const printCV = () => {
         </div>
       </div>
     </div>
+    <!-- Mobile Drawer Menu -->
+    <transition name="slide">
+      <div
+        v-if="isMobileMenuOpen"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+        @click.self="toggleMobileMenu"
+      >
+        <div
+          class="absolute top-0 left-0 h-full w-64 bg-white shadow-lg p-6 z-50"
+        >
+          <button class="mb-4" @click="toggleMobileMenu">
+            <Icon name="mdi:close" class="w-6 h-6" />
+          </button>
+          <ul class="flex flex-col gap-4 text-md">
+            <!-- <li>
+              <NuxtLink
+                to="/"
+                :class="[
+                  route.path === '/'
+                    ? 'text-red-500 font-bold'
+                    : 'text-gray-700',
+                  'transition-colors hover:text-red-500',
+                ]"
+                @click="toggleMobileMenu"
+                >Home</NuxtLink
+              >
+            </li> -->
+            <li>
+              <NuxtLink
+                to="/about"
+                :class="[
+                  route.path === '/about'
+                    ? 'text-red-500 font-bold'
+                    : 'text-gray-700',
+                  'transition-colors hover:text-red-500',
+                ]"
+                @click="toggleMobileMenu"
+                >About</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
+                to="/portfolio"
+                :class="[
+                  route.path === '/portfolio'
+                    ? 'text-red-500 font-bold'
+                    : 'text-gray-700',
+                  'transition-colors hover:text-red-500',
+                ]"
+                @click="toggleMobileMenu"
+                >portfolio</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
+                to="/skills"
+                :class="[
+                  route.path === '/skills'
+                    ? 'text-red-500 font-bold'
+                    : 'text-gray-700',
+                  'transition-colors hover:text-red-500',
+                ]"
+                @click="toggleMobileMenu"
+                >Skills</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
+                to="/cv"
+                :class="[
+                  route.path === '/cv'
+                    ? 'text-red-500 font-bold'
+                    : 'text-gray-700',
+                  'transition-colors hover:text-red-500',
+                ]"
+                @click="toggleMobileMenu"
+                >CV</NuxtLink
+              >
+            </li>
+          </ul>
+          <div class="mt-6 flex gap-4">
+            <a href="https://linkedin.com/in/an2nicaballero" target="_blank">
+              <Icon name="logos:linkedin-icon" class="w-5 h-5" />
+            </a>
+            <a href="https://www.x.com/aceofcavaliers/" target="_blank">
+              <Icon name="simple-icons:x" class="w-5 h-5" />
+            </a>
+            <a href="https://github.com/acecavaliers" target="_blank">
+              <Icon name="logos:github-icon" class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </transition>
   </header>
 </template>
