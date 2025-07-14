@@ -8,8 +8,8 @@
           >
             Contact
           </h1>
-          <ul class="">
-            <li class="">
+          <ul>
+            <li>
               <p>{{ info.name }}</p>
               <p>{{ info.phone }}</p>
               <p>{{ info.email }}</p>
