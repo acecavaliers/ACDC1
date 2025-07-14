@@ -86,6 +86,39 @@
         "items": ["SAP Business One", "SAP Crystal Report"]
       }
     ],
+
+    "projects": [
+      {
+        "year":"2024",
+        "name": "Material Management System",
+        "company": "Dadiangas Medical Center",
+        "technology": ["Laravel","PHP", "Vuejs", "JavaScript", "Tailwind CSS","Git",  "MSSQL"]
+      },
+      {
+        "year":"2024",
+        "name": "Human Resource Information System",
+        "company": "Dadiangas Medical Center",
+        "technology": ["Laravel","PHP", "Vuejs", "JavaScript", "Tailwind CSS","Git",  "MSSQL"]
+      },
+      {
+        "year":"2022",
+        "name": "SAP B1 Reports",
+        "company": "Dadiangas Glass and Construction Depot Inc.",
+        "technology": ["SAP Business One", "Crystal Reports", "MSSQL"]
+      },
+      {
+        "year":"2022",
+        "name": "Suds Laundry Monitoring System",
+        "company": "Dadiangas Glass and Construction Depot Inc.",
+        "technology":["VB.Net", "C#", "Crystal Reports", "MSSQL"]
+      },
+      {
+        "year":"2021",
+        "name": "DGCDI Price Inquiry",
+        "company": "Dadiangas Glass and Construction Depot Inc.",
+        "technology":["VB.Net", "C#", "Excell", "MSSQL"]
+      }
+    ],
     "experience": [
         {
           "position": "Full-Stack Developer",

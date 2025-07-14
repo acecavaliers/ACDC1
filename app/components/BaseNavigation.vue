@@ -79,10 +79,10 @@ const printCV = () => {
                     'transition-colors hover:text-red-500',
                   ]"
                   @click="toggleMobileMenu"
-                  >portfolio</NuxtLink
+                  >Projects</NuxtLink
                 >
               </li>
-              <li>
+              <!-- <li>
                 <NuxtLink
                   to="/skills"
                   :class="[
@@ -93,7 +93,20 @@ const printCV = () => {
                   ]"
                   >Skills</NuxtLink
                 >
+              </li> -->
+              <li>
+                <NuxtLink
+                  to="/contact"
+                  :class="[
+                    route.path === '/contact'
+                      ? 'text-red-500 font-bold'
+                      : 'text-gray-700',
+                    'transition-colors hover:text-red-500',
+                  ]"
+                  >contact</NuxtLink
+                >
               </li>
+
               <li>
                 <NuxtLink
                   to="/cv"
@@ -215,10 +228,10 @@ const printCV = () => {
                   'transition-colors hover:text-red-500',
                 ]"
                 @click="toggleMobileMenu"
-                >portfolio</NuxtLink
+                >Projects</NuxtLink
               >
             </li>
-            <li>
+            <!-- <li>
               <NuxtLink
                 to="/skills"
                 :class="[
@@ -230,7 +243,7 @@ const printCV = () => {
                 @click="toggleMobileMenu"
                 >Skills</NuxtLink
               >
-            </li>
+            </li> -->
             <li>
               <NuxtLink
                 to="/cv"

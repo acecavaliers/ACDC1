@@ -6,7 +6,7 @@
           <h1
             class="pt-2 font-extrabold text-xl lg:text-2xl text-sky-900 pb-2 text-balance"
           >
-            Projects
+            All Projects
           </h1>
           <p class="">
             Here you will find some of the personal and clients projects that I
@@ -29,25 +29,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="border-t">
-              <td class="px-2 py-4">2021</td>
-              <td class="px-0 py-4">DGCDI Price Inquiry</td>
-              <td class="px-2 py-4">DGCDI</td>
-              <td class="px-0 py-4">VB.Net MSSQL</td>
-            </tr>
-            <tr class="border-t">
-              <td class="px-2 py-4">2021</td>
-              <td class="px-0 py-4">Harvard Business School Next.js Site</td>
-              <td class="px-2 py-4">Upstatement</td>
-              <td class="px-0 py-4">React TypeScript Next.js Contentful</td>
-            </tr>
-            <tr class="border-t">
-              <td class="px-2 py-4">2021</td>
+            <tr class="border-t" v-for="(prj, index) in projects" :key="index">
+              <td class="px-2 py-4">{{ prj.year }}</td>
+              <td class="px-0 py-4">{{ prj.name }}</td>
+              <td class="px-0 py-4">{{ prj.company }}</td>
               <td class="px-0 py-4">
-                Philadelphia Inquirer Sports Scoreboards
+                <span
+                  class="mr-1 px-2 rounded text-gray-100 bg-green-600"
+                  v-for="(tch, index) in prj.technology"
+                  :key="index"
+                >
+                  {{ tch }}
+                </span>
               </td>
-              <td class="px-2 py-4">Scout</td>
-              <td class="px-0 py-4">WordPress Timber WooCommerce</td>
             </tr>
           </tbody>
         </table>
@@ -66,13 +60,8 @@ definePageMeta({
 });
 import { useDownloadStore } from "~~/stores/downloadStore";
 
-const techSkills = ref([]);
-const skillIcon = ref([]);
-const softSkill = ref([]);
-const xp = ref([]);
-const education = ref({});
-const info = ref({});
-const summary = ref("");
+const projects = ref([]);
+
 const currentYear = new Date().getFullYear();
 const downloadCV = () => {
   const downloadStore = useDownloadStore();
@@ -85,12 +74,6 @@ const printCV = () => {
 
 onMounted(() => {
   //
-  techSkills.value = data.technicalSkills;
-  skillIcon.value = data.skillIcon;
-  softSkill.value = data.skill;
-  xp.value = data.experience;
-  education.value = data.education;
-  info.value = data.info;
-  summary.value = data.summary;
+  projects.value = data.projects;
 });
 </script>

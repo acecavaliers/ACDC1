@@ -12,29 +12,24 @@
         </div>
       </section> -->
       <section class="">
-        <div
-          class="container flex flex-col lg:flex-row items-center py-10 gap-10"
-        >
+        <div class="container flex flex-col lg:flex-row items-center gap-10">
           <div class="flex-1 order-2 lg:order-1 text-center lg:text-left">
             <h1
               class="text-4xl lg:text-6xl font-extrabold mb-6 text-balance uppercase"
             >
               About Me
             </h1>
-            <p class="text-xl lg:text-2xl mb-4 text-balance">
+            <p class="text-balance">
               Here you will find more information about me, what I do, and my
               current skills mostly in terms of programming and technology
-            </p>
-            <p class="text-md lg:text-md mb-4 text-balance">
-              {{ summary }}
             </p>
           </div>
         </div>
       </section>
-      <section class="pb-4">
+      <section class="border-b py-8 shadow-sm">
         <div class="container">
           <div>
-            <p class="text-xl lg:text-2xl pb-2 text-balance">SKILLS</p>
+            <p class="text-xl lg:text-2xl text-sky-900 text-balance">SKILLS</p>
             Technical Skills Strong Analytical & Problem-Solving Abilities
             Exceptional Attention to Detail Effective Collaboration &
             Communication Skills
@@ -157,45 +152,103 @@
           </div>
         </div>
       </section>
+
+      <!-- Work Experience -->
+
+      <section class="border-b py-8 shadow-sm">
+        <div class="container">
+          <div>
+            <p class="text-xl lg:text-2xl text-sky-900 text-balance">
+              WORK EXPERIENCE
+            </p>
+            <div v-for="(exp, index) in xp" :key="index">
+              <h1 class="pt-2 text-lg font-extrabold">
+                {{ exp.position }}
+              </h1>
+              <h1 class="italic">
+                {{ exp.company }}
+              </h1>
+              <h1 class="italic">{{ exp.date }}</h1>
+              <ul class="ml-2">
+                <li v-for="(task, index) in exp.responsibilities" :key="index">
+                  <Icon
+                    name="ion:ellipse-sharp"
+                    style="color: black"
+                    class="w-2 h-2 mr-1.5"
+                  />
+                  {{ task.summary }}
+
+                  <ul class="ml-2">
+                    <li
+                      v-for="(detail, index) in task.details"
+                      :key="index"
+                      class="p-1"
+                    >
+                      <Icon
+                        name="ion:chevron-forward"
+                        style="color: black"
+                        class="w-2 h-2 mr-1.5"
+                      />
+                      {{ detail }}
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-8">
+        <div class="container">
+          <div>
+            <p class="text-xl lg:text-2xl text-sky-900 pb-2 text-balance">
+              EDUCATION
+            </p>
+            <div v-for="(educ, index) in education" :key="index">
+              {{ educ }}
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
 
 <script setup>
-// import { jsPDF } from "jspdf";
+import { jsPDF } from "jspdf";
 
-// import data from "../pages/data/data.json";
-// import { onMounted, ref, computed, watch, onBeforeUnmount } from "vue";
-// definePageMeta({
-//   layout: "default",
-// });
-// import { useDownloadStore } from "~~/stores/downloadStore";
+import data from "../pages/data/data.json";
+import { onMounted, ref, computed, watch, onBeforeUnmount } from "vue";
+definePageMeta({
+  layout: "default",
+});
+import { useDownloadStore } from "~~/stores/downloadStore";
 
-// const techSkills = ref([]);
-// const skillIcon = ref([]);
-// const softSkill = ref([]);
-// const xp = ref([]);
-// const education = ref({});
-// const info = ref({});
-// const summary = ref("");
-// const currentYear = new Date().getFullYear();
-// const downloadCV = () => {
-//   const downloadStore = useDownloadStore();
-//   downloadStore.triggerDownload();
-// };
-// const printCV = () => {
-//   const downloadStore = useDownloadStore();
-//   downloadStore.triggerPrint();
-// };
+const techSkills = ref([]);
+const skillIcon = ref([]);
+const softSkill = ref([]);
+const xp = ref([]);
+const education = ref({});
+const info = ref({});
+const summary = ref("");
+const currentYear = new Date().getFullYear();
+const downloadCV = () => {
+  const downloadStore = useDownloadStore();
+  downloadStore.triggerDownload();
+};
+const printCV = () => {
+  const downloadStore = useDownloadStore();
+  downloadStore.triggerPrint();
+};
 
-// onMounted(() => {
-//   //
-//   techSkills.value = data.technicalSkills;
-//   skillIcon.value = data.skillIcon;
-//   softSkill.value = data.skill;
-//   xp.value = data.experience;
-//   education.value = data.education;
-//   info.value = data.info;
-//   summary.value = data.summary;
-// });
+onMounted(() => {
+  techSkills.value = data.technicalSkills;
+  skillIcon.value = data.skillIcon;
+  softSkill.value = data.skill;
+  xp.value = data.experience;
+  education.value = data.education;
+  info.value = data.info;
+  summary.value = data.summary;
+});
 </script>
