@@ -147,9 +147,10 @@ const printCV = () => {
           <div class="relative group inline-block">
             <button
               @click="printCV"
-              class="px-3 bg-sky-700 text-white text-md rounded-bl-md"
+              class="flex items-center gap-2 px-3 py-1 bg-sky-700 text-white text-md rounded-bl-md"
             >
               <Icon name="material-symbols:print-sharp" class="w-5 h-5" />
+              <!-- <span class="text-sm">Print CV</span> -->
             </button>
 
             <!-- Tooltip -->
@@ -163,9 +164,10 @@ const printCV = () => {
           <div class="relative group inline-block">
             <button
               @click="downloadCV"
-              class="px-3 bg-sky-800 text-white text-md rounded-br-md"
+              class="flex items-center gap-2 px-3 py-1 bg-sky-800 text-white text-md rounded-br-md"
             >
               <Icon name="material-symbols:download-sharp" class="w-5 h-5" />
+              <!-- <span class="text-sm">download CV</span> -->
             </button>
 
             <!-- Tooltip -->

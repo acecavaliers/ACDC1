@@ -29,12 +29,10 @@
             </p>
           </div>
           <div class="flex-1 order-1 lg:order-2">
-            <div
-              class="w-1/2 border-8 border-gray-700 rounded-full overflow-hidden"
-            >
+            <div class="w-1/2 overflow-hidden">
               <NuxtImg
                 sizes="xs:100vw sm:322px"
-                src="/ac.png"
+                src="/ac1.png"
                 format="webp"
                 densities="x1"
                 alt=""
