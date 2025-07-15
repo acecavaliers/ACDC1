@@ -15,7 +15,7 @@
         <div class="container flex flex-col lg:flex-row items-center gap-10">
           <div class="flex-1 order-2 lg:order-1 text-center lg:text-left">
             <h1
-              class="text-4xl lg:text-6xl font-extrabold mb-6 text-balance uppercase"
+              class="text-2xl lg:text-4xl font-extrabold mb-6 text-balance uppercase"
             >
               About Me
             </h1>
