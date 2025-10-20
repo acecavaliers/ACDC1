@@ -1,8 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// export default defineNuxtConfig({
+//   ssr: false, // disable server-side rendering
+//   target: 'static', // ensure static export
+//   app: {
+//     baseURL: '/<your-repo-name>/', // important if repo name ≠ username.github.io
+//   },
+// })
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   future: {
     compatibilityVersion: 4,
+  },
+  app: {
+    baseURL: '/ACDC1/',
   },
 
   experimental: {
