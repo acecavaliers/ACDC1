@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  ssr: false,
+  ssr: true,
   app: {
     baseURL: '/ACDC1/',
   },
