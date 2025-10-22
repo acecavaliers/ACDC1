@@ -156,10 +156,9 @@
 
       <!-- hidden -->
       <div class="hidden">
-        <div id="printable-area" class="py-4 w-[8.5in] h-[11in] bg-white mx-auto">
+        <div id="printable-area" class="w-[8.5in] h-[13in] bg-white mx-auto">
           <!-- Header / Basic Personal Info -->
-           <div class="py-4">
-          <section class="">
+          <section class="py-4">
             <div class="container flex">
               <img
                 class="rounded-md"
@@ -169,41 +168,30 @@
               />
 
               <!-- <img src="/acdc.png" alt="" /> -->
-              <div class="px-4 mt-4">
-                <h1 class="text-2xl font-bold uppercase">{{ info.name }}</h1>
-                <h1 class="text-md font-medium">Full-Stack Developer</h1>
-              
-              </div>
-            </div>
-          </section> 
-          <section class="pb-2">
-            <div class="container flex">
-              
-              <!-- <img src="/acdc.png" alt="" /> -->
-              <div class="px-0">
-              
+              <div class="px-4">
+                <h1 class="text-xl font-medium uppercase">{{ info.name }}</h1>
                 <div class="flex text-sm">
-                  <div class="sm:w-16 font-bold">Phone</div>
+                  <div class="sm:w-16">Phone</div>
                   <h1 class="">: {{ info.phone }}</h1>
                 </div>
                 <div class="flex text-sm">
-                  <div class="sm:w-16 font-bold">Email</div>
+                  <div class="sm:w-16">Email</div>
                   <h1 class="">: {{ info.email }}</h1>
                 </div>
                 <div class="flex text-sm">
-                  <div class="sm:w-16 font-bold">Address</div>
+                  <div class="sm:w-16">Address</div>
                   <h1 class="">: {{ info.address }}</h1>
                 </div>
               </div>
             </div>
           </section>
           <!-- Summary -->
-          <section class="pb-3">
+          <section class="pb-4">
             <div class="container">
               <h1
                 class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
               >
-                PROFESSIONAL SUMMARY
+                SUMMARY
               </h1>
               <p class="text-sm">
                 {{ summary }}
@@ -212,18 +200,18 @@
           </section>
 
           <!-- Skills -->
-          <section class="pb-3">
+          <section class="pb-4">
             <div class="container flex justify-between">
-              <div class="w-full">
+              <div class="w-1/2">
                 <h1
                   class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
                 >
-                  SKILLS & TECHNOLOGIES
+                  Technical Skills
                 </h1>
 
                 <ul class="text-sm ml-2">
                   <li v-for="(skill, index) in techSkills" :key="index">
-                    • <span class="font-bold"> {{ skill.type}} : </span> {{ skill.items.join(", ") }}
+                    • {{ skill.items.join(", ") }}
                   </li>
                   <!-- <li>
                     • Programming Languages : Visual Basic, C#, Java,
@@ -235,7 +223,7 @@
                   </li> -->
                 </ul>
               </div>
-              <!-- <div class="w-1/2">
+              <div class="w-1/2">
                 <h1
                   class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
                 >
@@ -246,12 +234,12 @@
                     • {{ skill.skill }}
                   </li>
                 </ul>
-              </div> -->
+              </div>
             </div>
           </section>
           <!-- Work Experience -->
 
-          <section class="pb-3">
+          <section class="pb-4">
             <div class="container">
               <div>
                 <h1
@@ -268,23 +256,23 @@
                     {{ exp.company }}
                   </h1>
                   <h1 class="italic text-sm">{{ exp.date }}</h1>
-                  <ul class="ml-4">
+                  <ul class="ml-2">
                     <li
                       v-for="(task, index) in exp.responsibilities"
                       :key="index"
                       class="text-sm"
                     >
                       <p>
-                        • <span class="ml-2">{{ task.summary }}</span>
+                        • <span class="ml-1">{{ task.summary }}</span>
                       </p>
 
-                      <ul class="ml-5">
+                      <ul class="ml-1">
                         <li
                           v-for="(detail, index) in task.details"
                           :key="index"
                           class="text-sm"
                         >
-                           {{ detail }}
+                          - {{ detail }}
                         </li>
                       </ul>
                     </li>
@@ -294,7 +282,7 @@
             </div>
           </section>
           <!-- Education -->
-          <section class="pb-3">
+          <section class="pb-4">
             <div class="container">
               <h1
                 class="border-b-2 py-2 border-sky-900 text-md text-sky-950 font-bold"
@@ -306,24 +294,6 @@
               </div>
             </div>
           </section>
-          <section class="pt-3">
-            <div class="container flex justify-between">
-        
-              <div class="w-full">
-                <h1
-                  class="border-b-2 py-2 border-sky-900 text-sm text-sky-950 font-bold"
-                >
-                  Soft Skills
-                </h1>
-                <ul class="text-sm ml-2">
-                  <li v-for="(skill, index) in softSkill" :key="index">
-                    • {{ skill.skill }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          </div>
         </div>
       </div>
     </main>

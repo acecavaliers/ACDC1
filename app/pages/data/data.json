@@ -7,7 +7,7 @@
         "CI/CD Integration: Set up automated deployment pipelines."
       ]
     } ],
-    "summary":"Full-Stack Developer experienced in building scalable web and enterprise applications using Laravel, Vue.js, VB.NET, SAP Business One, and Crystal Reports. Skilled in database design, system optimization, and RESTful API development, with a proven ability to deliver user-focused solutions that improve efficiency and streamline workflows."
+    "summary":"Full-Stack Developer with expertise in front-end and back-end technologies like VB.NET, SAP B1, Crystal Reports, Laravel, and Vue.js. Skilled in database design, system optimization and development. Proven ability to deliver scalable, user-friendly applications and streamline business processes. Experienced in report generation, query optimization, and full development lifecycle from design to deployment."
     ,
     "info":
     {   "name":"ANTHONY CABALLERO",
@@ -72,28 +72,18 @@
     "technicalSkills": [
       {
         "icon":"ion:ellipse-sharp",
-        "type": "Frontend",
-        "items": ["React.js, Next.js, Vue.js, Nuxt, TypeScript, JavaScript, TailwindCSS, Bootstrap"]
+        "type": "Languages",
+        "items": ["Visual Basic", "C#", "Java", "JavaScript", "Php", "SQL"]
       },
       {
         "icon":"ion:ellipse-sharp",
-        "type": "Backend",
-        "items": ["Node.js, NestJS, Express.js, REST APIs"]
+        "type": "Frameworks",
+        "items": ["Laravel", "Vue JS", "Tailwind CSS"]
       },
       {
         "icon":"ion:ellipse-sharp",
         "type": "ERP",
         "items": ["SAP Business One", "SAP Crystal Report"]
-      },
-      {
-        "icon":"ion:ellipse-sharp",
-        "type": "Databases",
-        "items": ["MySQL", "MSSQL","PostgreSQL"]
-      },
-      {
-        "icon":"ion:ellipse-sharp",
-        "type": "Tools & Platforms",
-        "items": ["Git", "GitHub", "Postman", "VS Code","Visual Studio", "Jira", "Sourcetree", "Slack."]
       }
     ],
 
@@ -131,7 +121,7 @@
     ],
     "experience": [
         {
-          "position": "Full-Stack Web Developer",
+          "position": "Full-Stack Developer",
           "company": "Dadiangas Medical Center, General Santos City",
           "date": "Apr 2024 – Present",
           "responsibilities": [
@@ -139,18 +129,22 @@
               "summary": "Database Design: Created and optimized relational databases for hospital systems."
             },
             {
-              "summary": "Collaborated with cross-functional teams to design and implement RESTful APIs."
+              "summary": "Collaborated with cross-functional teams to design and implement RESTful APIs, enabling seamless integration with third-party services."
             },
             {
-              "summary": "Developed Modules for Human Resource Information System (Laravel + VueJs + MSSQL)",
+              "summary": "Developed Modules for Human Resource Information System (HRIS)",
               "details": [
-                "Modules : Work Shift, Time-In Record, Request Time Off, Calendar and Events "
+                "Employee Work Shift Module: Built shift scheduling for HR.",
+                "Employee Time-In Record Module: Automated attendance tracking.",
+                "Request Time Off Module: Developed leave request and approval workflows."
               ]
             },
             {
-              "summary": "Led the development of Material Management System (Laravel + VueJs + MSSQL)",
+              "summary": "Developed Modules for Material Management System (MMS)",
               "details": [
-                "Modules : Purchasing(request, quotation, order, goods reciept, returns, item repack, package production, donations) with transactions relationship for easy tracking and monitoring and other modules (e.g., supplier managament, approvals)."
+                "Supplier Modules: Streamlined supplier management.",
+                "Purchase Request/Quotation/Order Modules: Automated procurement process.",
+                "Approval Setup Module: Created approval workflows for procurement."
               ]
             }
           ]
@@ -186,7 +180,7 @@
               ]
             },
             {
-              "summary": "Developed software systems using VB.NET and MSSQL.",
+              "summary": "Developed software systems using VB.NET.",
               "details": [
                 "DGCD Price and Stocks Inquiry Program.",
                 "Suds Laundry Transactions Monitoring System."
