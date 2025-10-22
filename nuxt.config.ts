@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
   ssr: false,
   app: {
-    baseURL: '/ACDC1/',
+    // baseURL: '/ACDC1/',
     buildAssetsDir: '_nuxt',
     head: {
       title: 'ACDC',
