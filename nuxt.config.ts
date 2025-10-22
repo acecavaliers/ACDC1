@@ -12,10 +12,17 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  ssr: true,  
-  target: 'static',
+  ssr: false,
   app: {
     baseURL: '/ACDC1/',
+    buildAssetsDir: '/ACDC1/_nuxt/',
+    head: {
+      title: 'ACDC',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      ]
+    }
   },
 
   experimental: {
